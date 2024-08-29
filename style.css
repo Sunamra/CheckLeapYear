@@ -21,7 +21,7 @@ p {
 }
 
 .expand {
-	animation: expandText 0.8s cubic-bezier(0.4, 0, 1, 1);
+	animation: expandText 0.5s cubic-bezier(0.4, 0, 1, 1);
 }
 
 .shake {
