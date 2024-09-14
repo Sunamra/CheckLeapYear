@@ -1,5 +1,4 @@
 function checkLeapYear(year) {
-	alert(window.devicePixelRatio);
 	var outputText = "";
 
 	if (year % 400 === 0) {
