@@ -7,6 +7,11 @@
 	<title>Check Leap Year</title>
 	<link rel="stylesheet" href="style.css">
 	<script src="script.js" defer></script>
+	
+	<!-- Force Preloading -->
+	<link rel="preload" href="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+		as="script" crossorigin="anonymous">
+	<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 
 <body>
@@ -14,13 +19,22 @@
 		<p id="result">Enter Year</p>
 	</div>
 
-	<br>
+	<br class="br1">
 	<div class="inputArea">
-		<input type="number" id="input" placeholder="e.g. 2024">
+		<div class="inputFieldWrap">
+			<input type="text" id="inputField" placeholder="e.g. 2024" min="0" max="9"
+				oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+			</input>
+
+			<div id="icon"></div>
+		</div>
+
 		<br>
 		<br>
 		<button id="submit" onclick="takeInput()">Check</button>
 	</div>
+
+
 </body>
 
 </html>
