@@ -15,6 +15,12 @@ var submittedValue = "";
 
 const textField = document.getElementById('inputField');
 
+textField.addEventListener('keypress', (e) => {
+	if (e.key == 'Enter') {
+		takeInput();
+	}
+});
+
 textField.addEventListener('input', function () {
 
 	resultDiv.classList.remove('shake', 'red');
